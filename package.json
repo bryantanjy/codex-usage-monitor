@@ -3,7 +3,12 @@
   "displayName": "Codex Usage Monitor",
   "description": "Shows your Codex usage limits in the VS Code status bar.",
   "version": "0.1.0",
-  "publisher": "local",
+  "publisher": "LephicBryan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryantanjy/codex-usage-monitor.git"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
