@@ -1,8 +1,9 @@
 {
   "name": "codex-usage-viewer",
   "displayName": "Codex Usage Viewer",
+  "icon": "assets/icon.png",
   "description": "Shows your Codex usage limits in the VS Code status bar.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "LephicBryan",
   "license": "MIT",
   "repository": {

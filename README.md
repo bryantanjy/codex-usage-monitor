@@ -1,5 +1,9 @@
 # Codex Usage Viewer
 
+<p align="center">
+  <img src="assets/icon.png" alt="Codex Usage Viewer logo: a mint usage gauge around a terminal prompt" width="128" height="128">
+</p>
+
 Keep an eye on your Codex usage without leaving VS Code. A compact status bar item shows your remaining allowance, with details available on hover.
 
 ```text
