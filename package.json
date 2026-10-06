@@ -1,0 +1,83 @@
+{
+  "name": "codex-usage-monitor",
+  "displayName": "Codex Usage Monitor",
+  "description": "Shows your Codex usage limits in the VS Code status bar.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:codexUsage.refresh",
+    "onCommand:codexUsage.openUsagePage"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codexUsage.refresh",
+        "title": "Codex Usage: Refresh"
+      },
+      {
+        "command": "codexUsage.openUsagePage",
+        "title": "Codex Usage: Open Usage Page"
+      }
+    ],
+    "configuration": {
+      "title": "Codex Usage Monitor",
+      "properties": {
+        "codexUsage.refreshIntervalSeconds": {
+          "type": "number",
+          "default": 60,
+          "minimum": 15,
+          "maximum": 3600,
+          "description": "How often to refresh Codex usage."
+        },
+        "codexUsage.codexPath": {
+          "type": "string",
+          "default": "codex",
+          "description": "Path to the Codex CLI executable. Example: codex or C:\\\\Users\\\\you\\\\AppData\\\\Roaming\\\\npm\\\\codex.cmd"
+        },
+        "codexUsage.displayLimit": {
+          "type": "string",
+          "enum": [
+            "primary",
+            "weekly",
+            "lowest"
+          ],
+          "default": "lowest",
+          "description": "Which remaining percentage to display in the status bar."
+        },
+        "codexUsage.showIcon": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show an icon in the status bar."
+        },
+        "codexUsage.commandTimeoutMs": {
+          "type": "number",
+          "default": 10000,
+          "minimum": 1000,
+          "maximum": 60000,
+          "description": "Timeout for Codex CLI usage commands."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "test": "npm run compile && node --test test/*.test.cjs",
+    "watch": "tsc -watch -p ./",
+    "package": "npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.96.0",
+    "@vscode/vsce": "^3.2.1",
+    "typescript": "^5.7.2"
+  }
+}

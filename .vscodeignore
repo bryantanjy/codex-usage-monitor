@@ -1,0 +1,7 @@
+.vscode/**
+src/**
+tsconfig.json
+.gitignore
+*.vsix
+test/**
+test-codex-status.ps1
