@@ -1,6 +1,6 @@
 {
-  "name": "codex-usage-monitor",
-  "displayName": "Codex Usage Monitor",
+  "name": "codex-usage-viewer",
+  "displayName": "Codex Usage Viewer",
   "description": "Shows your Codex usage limits in the VS Code status bar.",
   "version": "0.1.0",
   "publisher": "LephicBryan",
